@@ -9,6 +9,7 @@ router.get('/', function(req, res, next) {
 });
 router.post('/get-ip', (req, res) => {
   const clientIP = req.connection.remoteAddress || req.socket.remoteAddress;
+  console.log(req)
   console.log('Client IP:', clientIP);
   // Handle the POST request
   res.send('POST request received!');
